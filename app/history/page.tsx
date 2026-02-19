@@ -184,19 +184,21 @@ export default function HistoryPage() {
 
       {/* New chat FAB */}
       <div className="fixed bottom-8 left-1/2 -translate-x-1/2 w-full max-w-lg px-5">
-        <button onClick={handleNewChat}
-          className="w-full flex items-center justify-center gap-2.5 py-4 rounded-2xl font-bold text-white text-base
-                     bg-gradient-to-r from-[#00d4ff] to-[#0284c7]
-                     shadow-[0_8px_30px_rgba(0,212,255,0.3)] hover:shadow-[0_8px_40px_rgba(0,212,255,0.5)]
-                     transition-all duration-300 active:scale-95"
-          style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-          <Plus size={20} />
-          Chat baru
-        </button>
-      </div>
-    </div>
-  );
-}
+  <button
+    onClick={handleNewChat}
+    className="w-full flex items-center justify-center gap-2.5 py-4 rounded-2xl
+               font-bold text-white text-base
+               bg-[#0B0B0B]
+               shadow-[0_8px_30px_rgba(0,0,0,0.6)]
+               hover:bg-[#111111]
+               hover:shadow-[0_8px_40px_rgba(0,0,0,0.85)]
+               transition-all duration-300 active:scale-95"
+    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+  >
+    <Plus size={20} />
+    Chat baru
+  </button>
+</div>
 
 function ChatItem({ chat, onOpen, onDelete }: {
   chat: Chat;
